@@ -1,0 +1,81 @@
+/* Banner Styling */
+.banner {
+    color: white;
+    object-fit: contain;
+    height: 448px;
+    background-size: cover !important;
+    background-position: center center !important;
+    position: relative;
+  }
+  
+  .banner__contents {
+    margin-left: 30px;
+    padding-top: 140px;
+    height: 190px;
+    position: relative;
+  }
+  
+  .banner__title {
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+  }
+  
+  .banner__buttons {
+    display: flex;
+  }
+  
+  .banner__button {
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 0.2vw;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: rgba(51, 51, 51, 0.5);
+    transition: all 0.2s ease;
+  }
+  
+  .banner__button:hover {
+    color: #000;
+    background-color: #e6e6e6;
+  }
+  
+  .banner__description {
+    width: 45rem;
+    line-height: 1.3;
+    padding-top: 1rem;
+    font-size: 1.3rem;
+    max-width: 360px;
+    height: 80px;
+  }
+  
+  .banner__pg-rating {
+    position: absolute;
+    top: 300px;
+    right: 30px;
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .banner--fadeBottom {
+    height: 12rem;
+    background-image: linear-gradient(
+      180deg,
+      transparent,
+      rgba(36, 36, 36, 0.1),
+      #111
+    );
+    position: absolute;
+    top: 58%; /* Adjust this value to start the fade effect lower */
+    width: 100%;
+  }
+  
