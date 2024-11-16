@@ -1,120 +1,146 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
 /* Banner Styling */
 .banner {
-    color: white;
-    object-fit: contain;
-    height: 448px;
-    background-size: cover !important;
-    background-position: center center !important;
-    position: relative;
-  }
-  
-  .banner__contents {
-    margin-left: 30px;
-    padding-top: 140px;
-    height: 190px;
-    position: relative;
-  }
-  
+  color: white;
+  object-fit: contain;
+  height: 550px;
+  background-size: cover !important;
+  background-position: center center !important;
+  position: relative;
+}
+
+.banner__contents {
+  margin-left: 30px;
+  padding-top: 140px;
+  height: 190px;
+  position: relative;
+}
+
+.banner__title {
+  font-size: 3rem;
+  font-weight: 800;
+  padding-bottom: 0.3rem;
+}
+
+.banner__buttons {
+  display: flex;
+  margin-top: 15px;
+}
+
+.banner__button {
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 0.2vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: rgba(51, 51, 51, 0.5);
+  transition: all 0.2s ease;
+}
+
+.banner__button:hover {
+  color: #000;
+  background-color: #e6e6e6;
+}
+
+.banner__description {
+  width: 45rem;
+  line-height: 1.3;
+  padding-top: 1rem;
+  font-size: 1.3rem;
+  max-width: 360px;
+}
+
+/* PG Rating Styling */
+.banner__pg-rating {
+  position: absolute;
+  top: 300px;
+  right: 30px;
+  font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.banner--fadeBottom {
+  height: 15rem;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(36, 36, 36, 0.1),
+    #111
+  );
+  position: absolute;
+  top: 56.3%;
+  width: 100%;
+}
+
+.banner__button--play {
+  background-color: #fff;
+  color: #000;
+}
+
+.banner__button--play i {
+  margin-right: 10px;
+}
+
+.banner__button--info {
+  background-color: rgba(125, 125, 125, 0.8);
+  color: #fff;
+}
+
+.banner__button--info i {
+  margin-right: 10px;
+}
+
+/* Hover Effects */
+.banner__button--play:hover {
+  background-color: #dbdada;
+}
+
+.banner__button--info:hover {
+  background-color: rgba(85, 85, 85, 0.8);
+  color: #fff;
+}
+
+/* Responsive Styling */
+@media (max-width: 1082px) {
   .banner__title {
-    font-size: 3rem;
-    font-weight: 800;
-    padding-bottom: 0.3rem;
+    font-size: 1rem;
   }
-  
-  .banner__buttons {
-    display: flex;
-  }
-  
-  .banner__button {
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-    border: none;
-    font-weight: 700;
-    border-radius: 0.2vw;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    margin-right: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    background-color: rgba(51, 51, 51, 0.5);
-    transition: all 0.2s ease;
-   
-  }
-  
-  .banner__button:hover {
-    color: #000;
-    background-color: #e6e6e6;
-  }
-  
+
   .banner__description {
-    width: 45rem;
-    line-height: 1.3;
-    padding-top: 1rem;
     font-size: 1.3rem;
-    max-width: 360px;
-    height: 80px;
-  }
-  
-  .banner__pg-rating {
-    position: absolute;
-    top: 300px;
-    right: 30px;
-    font-size: 1.2rem;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-weight: bold;
-  }
-  
-  .banner--fadeBottom {
-    height: 12.1rem;
-    background-image: linear-gradient(
-      180deg,
-      transparent,
-      rgba(36, 36, 36, 0.1),
-      #111
-    );
-    position: absolute;
-    top: 57%; /* Adjust this value to start the fade effect lower */
     width: 100%;
   }
-  .banner__button--play {
-   background-color: #fff;
-    color: #000; } 
-  .banner__button--play i { 
-    margin-right: 10px; 
-  }
-  .banner__button--info { 
-    background-color: #807a7a; 
-    color: #fff; 
-  } 
-  .banner__button--info i {
-     margin-right: 10px; 
-    } 
-    /* Hover Effects */ 
-    .banner__button--play:hover { 
-      background-color: #dbdada; 
-    } 
-    .banner__button--info:hover { 
-      background-color: #525151; 
-    }
+}
 
-  /* Responsive Styling */
-   @media (max-width: 1082px) { 
-    .banner__title { 
-      font-size: 1rem; /* Smaller font size for smaller screens */ 
-    } 
-    .banner__description { 
-      font-size: 1.3rem; /* Smaller font size for smaller screens */ 
-      width: 100%; /* Adjust width for smaller screens */ 
-    } 
-  } 
-  @media (max-width: 480px) { 
-    .banner__title { 
-      font-size: 1.5rem; /* Even smaller font size for very small screens */ 
-    } 
-    .banner__description { 
-      font-size: 0.9rem; /* Even smaller font size for very small screens */ 
-      width: 100%; /* Adjust width for very small screens */ }
-    }
+@media (max-width: 480px) {
+  .banner__title {
+    font-size: 1.5rem;
+  }
+
+  .banner__description {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+}
+
+/* Larger Screen Styling */
+@media (min-width: 1082px) {
+  .banner__description {
+    max-width: 100%;
+    height: auto;
+  }
+}

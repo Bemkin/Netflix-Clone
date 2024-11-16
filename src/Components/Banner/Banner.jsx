@@ -68,7 +68,7 @@ const Banner = () => {
                 More Info
               </button>
             </div>
-            <h1 className="banner__description">{truncate(movie.overview, 150)}</h1>
+            <h1 className="banner__description">{truncate(movie.overview, 190)}</h1>
             <div className="banner__pg-rating">{rating}</div> {/* Add PG rating */}
           </>
         ) : (

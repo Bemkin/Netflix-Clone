@@ -13,7 +13,9 @@ const Header = () => {
     <header className="header">
       <div className="header__left">
         <div className="header__logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo" />
+          <a href="/"> 
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo" />
+          </a>
         </div>
         <div className="header__dropdown">
           <button className="header__dropdown-button" onClick={toggleDropdown}>
@@ -43,7 +45,7 @@ const Header = () => {
       </nav>
       <div className="header__icons">
         <i className="fas fa-search header__icon"></i>
-        <i className="fas fa-bell header__icon"></i>
+        <i className="fa-regular fa-bell header__icon"></i>
         <div className="header__user-icon">
           <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="User Icon" />
         </div>
