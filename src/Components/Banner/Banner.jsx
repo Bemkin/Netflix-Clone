@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Banner.css';
+import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome CSS
 
 const API_KEY = '97c9fbc7ec9c3095368e45cd6f9af8db'; // Replace with your actual TMDB API key
 
@@ -58,8 +59,14 @@ const Banner = () => {
           <>
             <h1 className="banner__title">{movie.title}</h1>
             <div className="banner__buttons">
-              <button className="banner__button">Play</button>
-              <button className="banner__button">More Info</button>
+              <button className="banner__button banner__button--play">
+                <i className="fas fa-play"></i>
+                Play
+              </button>
+              <button className="banner__button banner__button--info">
+                <i className="fas fa-info-circle"></i>
+                More Info
+              </button>
             </div>
             <h1 className="banner__description">{truncate(movie.overview, 150)}</h1>
             <div className="banner__pg-rating">{rating}</div> {/* Add PG rating */}

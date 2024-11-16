@@ -39,6 +39,7 @@
     padding-bottom: 0.5rem;
     background-color: rgba(51, 51, 51, 0.5);
     transition: all 0.2s ease;
+   
   }
   
   .banner__button:hover {
@@ -67,7 +68,7 @@
   }
   
   .banner--fadeBottom {
-    height: 12rem;
+    height: 12.1rem;
     background-image: linear-gradient(
       180deg,
       transparent,
@@ -75,7 +76,45 @@
       #111
     );
     position: absolute;
-    top: 58%; /* Adjust this value to start the fade effect lower */
+    top: 57%; /* Adjust this value to start the fade effect lower */
     width: 100%;
   }
-  
+  .banner__button--play {
+   background-color: #fff;
+    color: #000; } 
+  .banner__button--play i { 
+    margin-right: 10px; 
+  }
+  .banner__button--info { 
+    background-color: #807a7a; 
+    color: #fff; 
+  } 
+  .banner__button--info i {
+     margin-right: 10px; 
+    } 
+    /* Hover Effects */ 
+    .banner__button--play:hover { 
+      background-color: #dbdada; 
+    } 
+    .banner__button--info:hover { 
+      background-color: #525151; 
+    }
+
+  /* Responsive Styling */
+   @media (max-width: 1082px) { 
+    .banner__title { 
+      font-size: 1rem; /* Smaller font size for smaller screens */ 
+    } 
+    .banner__description { 
+      font-size: 1.3rem; /* Smaller font size for smaller screens */ 
+      width: 100%; /* Adjust width for smaller screens */ 
+    } 
+  } 
+  @media (max-width: 480px) { 
+    .banner__title { 
+      font-size: 1.5rem; /* Even smaller font size for very small screens */ 
+    } 
+    .banner__description { 
+      font-size: 0.9rem; /* Even smaller font size for very small screens */ 
+      width: 100%; /* Adjust width for very small screens */ }
+    }
