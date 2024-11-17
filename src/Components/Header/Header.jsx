@@ -1,17 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Header.css';
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome CSS
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => { 
+    const handleScroll = () => { 
+      if (window.scrollY > 50) { 
+        setIsScrolled(true); 
+      } else { 
+        setIsScrolled(false); 
+      } 
+    }; 
+    
+    window.addEventListener('scroll', handleScroll); 
+    return () => { 
+    window.removeEventListener('scroll', handleScroll); 
+  }; 
+}, []);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
   return (
-    <header className="header">
-      <div className="header__left">
+<header className={`header ${isScrolled ? 'header--scrolled' : ''}`}>      
+  <div className="header__left">
         <div className="header__logo">
           <a href="/"> 
             <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo" />

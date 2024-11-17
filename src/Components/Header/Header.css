@@ -10,11 +10,15 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background: rgba(20, 20, 20, 0.8);   
+  background: transparent;   
   position: fixed; 
   width: 100%; 
   z-index: 1000; 
+  transition: background-color 0.5s ease-in-out;
 }
+
+.header--scrolled { 
+  background-color: rgba(0, 0, 0, 0.8); }
 
 .header__left {
   display: flex;

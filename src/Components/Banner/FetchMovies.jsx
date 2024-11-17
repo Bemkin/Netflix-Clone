@@ -1,7 +1,6 @@
-// FetchMovies.js
 import axios from 'axios';
 
-const API_KEY = '97c9fbc7ec9c3095368e45cd6f9af8db'; // Replace with your TMDB API key
+const API_KEY = '97c9fbc7ec9c3095368e45cd6f9af8db'; 
 
 const fetchMovies = async () => {
   try {

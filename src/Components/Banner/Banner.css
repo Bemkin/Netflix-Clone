@@ -8,7 +8,7 @@ body {
 .banner {
   color: white;
   object-fit: contain;
-  height: 550px;
+  height: 800px;
   background-size: cover !important;
   background-position: center center !important;
   position: relative;
@@ -22,9 +22,10 @@ body {
 }
 
 .banner__title {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 800;
   padding-bottom: 0.3rem;
+  margin-top: 150px;
 }
 
 .banner__buttons {
@@ -82,8 +83,9 @@ body {
     #111
   );
   position: absolute;
-  top: 56.3%;
+  top: 70%;
   width: 100%;
+  pointer-events: none;
 }
 
 .banner__button--play {
@@ -117,7 +119,7 @@ body {
 /* Responsive Styling */
 @media (max-width: 1082px) {
   .banner__title {
-    font-size: 1rem;
+    font-size: 3rem;
   }
 
   .banner__description {
