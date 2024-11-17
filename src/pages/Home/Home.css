@@ -6,7 +6,7 @@ body {
   }
   
   /* Home Page Styling */
-  .home {
+   .home {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,32 +25,7 @@ body {
     width: 100%;
     margin-bottom: 20px;
   }
+   
+
   
-  .home__movieList {
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .movieList__title {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-  
-  .movieList__posters {
-    display: flex;
-    overflow-x: scroll;
-    padding: 10px 0;
-  }
-  
-  .movieList__poster {
-    flex-shrink: 0;
-    width: 200px;
-    margin-right: 10px;
-    transition: transform 0.2s;
-  }
-  
-  .movieList__poster:hover {
-    transform: scale(1.08);
-  }
   

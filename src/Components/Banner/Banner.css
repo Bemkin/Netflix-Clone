@@ -12,16 +12,36 @@ body {
   background-size: cover !important;
   background-position: center center !important;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .banner__contents {
-  margin-left: 30px;
-  padding-top: 140px;
-  height: 190px;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.banner__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
 .banner__title {
+  align-self: baseline;
+  margin-left: 40px;
   font-size: 4rem;
   font-weight: 800;
   padding-bottom: 0.3rem;
@@ -29,6 +49,8 @@ body {
 }
 
 .banner__buttons {
+  align-self: baseline;
+  margin-left: 40px;
   display: flex;
   margin-top: 15px;
 }
@@ -55,6 +77,8 @@ body {
 }
 
 .banner__description {
+  align-self: baseline;
+  margin-left: 40px;
   width: 45rem;
   line-height: 1.3;
   padding-top: 1rem;
@@ -65,7 +89,7 @@ body {
 /* PG Rating Styling */
 .banner__pg-rating {
   position: absolute;
-  top: 300px;
+  top: 600px;
   right: 30px;
   font-size: 1.2rem;
   background-color: rgba(0, 0, 0, 0.6);
@@ -86,6 +110,10 @@ body {
   top: 70%;
   width: 100%;
   pointer-events: none;
+}
+
+.banner--hidden {
+  display: none;
 }
 
 .banner__button--play {
