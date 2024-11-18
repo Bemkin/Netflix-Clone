@@ -65,24 +65,24 @@ const Header = () => {
             </button>
             {isDropdownOpen && (
               <ul className="header__dropdown-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">TV Shows</a></li>
-                <li><a href="#">Movies</a></li>
-                <li><a href="#">Latest</a></li>
-                <li><a href="#">My List</a></li>
-                <li><a href="#">Browse by Languages</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/tv-shows">TV Shows</a></li>
+                <li><a href="/movies">Movies</a></li>
+                <li><a href="/latest">Latest</a></li>
+                <li><a href="/my-list">My List</a></li>
+                <li><a href="/browse-by-languages">Browse by Languages</a></li>
               </ul>
             )}
           </div>
         </div>
         <nav className="header__nav">
           <ul className="header__nav-list">
-            <li className="header__nav-item"><a href="#">Home</a></li>
-            <li className="header__nav-item"><a href="#">TV Shows</a></li>
-            <li className="header__nav-item"><a href="#">Movies</a></li>
-            <li className="header__nav-item"><a href="#">Latest</a></li>
-            <li className="header__nav-item"><a href="#">My List</a></li>
-            <li className="header__nav-item"><a href="#">Browse by Languages</a></li>
+            <li className="header__nav-item"><a href="/">Home</a></li>
+            <li className="header__nav-item"><a href="/tv-shows">TV Shows</a></li>
+            <li className="header__nav-item"><a href="/movies">Movies</a></li>
+            <li className="header__nav-item"><a href="/latest">Latest</a></li>
+            <li className="header__nav-item"><a href="/my-list">My List</a></li>
+            <li className="header__nav-item"><a href="/browse-by-languages">Browse by Languages</a></li>
           </ul>
         </nav>
         <div className="header__icons">

@@ -1,24 +1,23 @@
 import React from 'react';
 import './Modal.css';
 
-const Modal = ({ movie, onClose }) => {
-  if (!movie) return null;
+const Modal = ({ item, onClose }) => {
+  if (!item) return null;
 
   return (
     <div className="modal">
       <div className="modal__content">
         <span className="modal__close" onClick={onClose}>&times;</span>
-        <h2>{movie.title || movie.name || movie.original_name}</h2>
-        <p><strong>Release Date:</strong> {movie.release_date}</p>
-        <p><strong>Rating:</strong> {movie.vote_average}</p>
-        <p><strong>Overview:</strong> {movie.overview}</p>
-        {movie.genres && (
-          <p><strong>Genres:</strong> {movie.genres.map((genre) => genre.name).join(', ')}</p>
+        <h2>{item.title || item.name || item.original_name}</h2>
+        <p><strong>Release Date:</strong> {item.release_date || item.first_air_date}</p>
+        <p><strong>Rating:</strong> {item.vote_average}</p>
+        <p><strong>Overview:</strong> {item.overview}</p>
+        {item.genres && (
+          <p><strong>Genres:</strong> {item.genres.map((genre) => genre.name).join(', ')}</p>
         )}
-        {movie.production_companies && (
-          <p><strong>Production Companies:</strong> {movie.production_companies.map((company) => company.name).join(', ')}</p>
+        {item.production_companies && (
+          <p><strong>Production Companies:</strong> {item.production_companies.map((company) => company.name).join(', ')}</p>
         )}
-        {/* Add more detailed information as needed */}
       </div>
     </div>
   );

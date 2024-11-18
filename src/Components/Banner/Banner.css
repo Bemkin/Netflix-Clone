@@ -174,3 +174,23 @@ body {
     height: auto;
   }
 }
+
+.banner__video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.banner__close-video {
+  position: absolute;
+  top: 120px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5); 
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  z-index: 1000; /* Ensure button is above the video */
+}
+

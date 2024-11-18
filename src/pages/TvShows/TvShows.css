@@ -1,0 +1,15 @@
+.tvShows {
+    padding: 20px;
+    color: white;
+    background-color: #111; /* Match background to home page */
+  }
+  
+  .tvShows__title {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* You can reuse any relevant styles from Home.css here */
+  
