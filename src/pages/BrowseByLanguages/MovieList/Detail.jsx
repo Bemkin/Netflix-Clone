@@ -31,7 +31,7 @@ const Detail = () => {
   }, [id, pathname]);
 
   if (!details) {
-    return <div>Loading...</div>;
+    return <div className='loading'>Loading...</div>;
   }
 
   return (
