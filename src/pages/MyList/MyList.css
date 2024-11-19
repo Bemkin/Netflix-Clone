@@ -1,0 +1,21 @@
+.mylist {
+    padding: 20px;
+    color: white;
+    background-color: #111; /* Match background to home page */
+    text-align: center; /* Center-align the content */
+    min-height: 50vh;
+    ;
+  }
+  
+  .mylist__title {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .mylist__message {
+    font-size: 3.2rem;
+    margin-top: 200px;
+    color: #aaa; /* Slightly different color for the message */
+  }
+  

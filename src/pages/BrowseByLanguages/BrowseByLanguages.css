@@ -1,0 +1,60 @@
+.browseByLanguages {
+    padding: 20px;
+    color: white;
+    background-color: #111; /* Match background to home page */
+    text-align: center; /* Center-align the content */
+  }
+  
+  .browseByLanguages__title {
+    margin-bottom: 20px;
+    font-size: 2.5rem; /* Slightly larger title */
+    font-weight: bold;
+  }
+  
+  .browseByLanguages__filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .browseByLanguages__filter {
+    margin: 0 10px;
+  }
+  
+  .browseByLanguages__filter label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .browseByLanguages__filter select {
+    padding: 5px;
+    font-size: 1rem;
+  }
+  
+  .browseByLanguages__content {
+    text-align: left; /* Align content to the left */
+  }
+  
+  .browseByLanguages__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .browseByLanguages__item {
+    width: 200px;
+    text-align: center;
+  }
+  
+  .browseByLanguages__item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .browseByLanguages__item p {
+    margin-top: 5px;
+    font-size: 1rem;
+  }
+  

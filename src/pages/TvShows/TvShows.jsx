@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from '../../Components/Header/Header';
-import Footer from '../../Components/Footer/Footer';
 import Banner from '../../Components/Banner/Banner';
 import MovieList from '../../Components/MovieList/MovieList'; // We'll reuse MovieList and rename it to TvShowList later
 import './TvShows.css';
@@ -8,7 +6,7 @@ import './TvShows.css';
 const TvShows = () => {
   return (
     <div>
-      <Header />
+      
       <Banner contentType="tv" /> {/* Specify content type as 'tv' */}
       <MovieList title="Trending TV Shows" fetchUrl="/trending/tv/week" />
       <MovieList title="Top Rated TV Shows" fetchUrl="/tv/top_rated" />

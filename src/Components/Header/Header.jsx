@@ -1,33 +1,34 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
-import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome CSS
-import Search from '../Search/Search'; // Import the Search component
-import Notifications from '../Notification/Notifications'; // Import the Notifications component
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import Search from '../Search/Search';
+import Notifications from '../Notification/Notifications';
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false); // State for search visibility
-  const [isNotificationsOpen, setIsNotificationsOpen] = useState(false); // State for notifications visibility
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
   const [notifications, setNotifications] = useState([
     'New movie release: Avengers!',
     'Your subscription is due for renewal.',
     '50% off on selected movies!',
-  ]); // Mock notifications for now
+  ]);
 
-  useEffect(() => { 
-    const handleScroll = () => { 
-      if (window.scrollY > 50) { 
-        setIsScrolled(true); 
-      } else { 
-        setIsScrolled(false); 
-      } 
-    }; 
-    
-    window.addEventListener('scroll', handleScroll); 
-    return () => { 
-      window.removeEventListener('scroll', handleScroll); 
-    }; 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   const toggleDropdown = () => {
@@ -52,12 +53,12 @@ const Header = () => {
 
   return (
     <>
-      <header className={`header ${isScrolled ? 'header--scrolled' : ''}`}>      
+      <header className={`header ${isScrolled ? 'header--scrolled' : ''}`}>
         <div className="header__left">
           <div className="header__logo">
-            <a href="/"> 
+            <Link to="/">
               <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo" />
-            </a>
+            </Link>
           </div>
           <div className="header__dropdown">
             <button className="header__dropdown-button" onClick={toggleDropdown}>
@@ -65,24 +66,24 @@ const Header = () => {
             </button>
             {isDropdownOpen && (
               <ul className="header__dropdown-menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="/tv-shows">TV Shows</a></li>
-                <li><a href="/movies">Movies</a></li>
-                <li><a href="/latest">Latest</a></li>
-                <li><a href="/my-list">My List</a></li>
-                <li><a href="/browse-by-languages">Browse by Languages</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/tv-shows">TV Shows</Link></li>
+                <li><Link to="/movies">Movies</Link></li>
+                <li><Link to="/latest">Latest</Link></li>
+                <li><Link to="/my-list">My List</Link></li>
+                <li><Link to="/browse-by-languages">Browse by Languages</Link></li> {/* Added link to Browse by Languages */}
               </ul>
             )}
           </div>
         </div>
         <nav className="header__nav">
           <ul className="header__nav-list">
-            <li className="header__nav-item"><a href="/">Home</a></li>
-            <li className="header__nav-item"><a href="/tv-shows">TV Shows</a></li>
-            <li className="header__nav-item"><a href="/movies">Movies</a></li>
-            <li className="header__nav-item"><a href="/latest">Latest</a></li>
-            <li className="header__nav-item"><a href="/my-list">My List</a></li>
-            <li className="header__nav-item"><a href="/browse-by-languages">Browse by Languages</a></li>
+            <li className="header__nav-item"><Link to="/">Home</Link></li>
+            <li className="header__nav-item"><Link to="/tv-shows">TV Shows</Link></li>
+            <li className="header__nav-item"><Link to="/movies">Movies</Link></li>
+            <li className="header__nav-item"><Link to="/latest">Latest</Link></li>
+            <li className="header__nav-item"><Link to="/my-list">My List</Link></li>
+            <li className="header__nav-item"><Link to="/browse-by-languages">Browse by Languages</Link></li> {/* Added link to Browse by Languages */}
           </ul>
         </nav>
         <div className="header__icons">
