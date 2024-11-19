@@ -15,7 +15,7 @@ const App = () => {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/Netflix-Clone/" element={<Home />} />
         <Route path="/tv-shows" element={<TvShows />} />
         <Route path="/movies" element={<Movies />} />
         <Route path="/latest" element={<Latest />} /> 

@@ -56,7 +56,7 @@ const Header = () => {
       <header className={`header ${isScrolled ? 'header--scrolled' : ''}`}>
         <div className="header__left">
           <div className="header__logo">
-            <Link to="/">
+            <Link to="/Netflix-Clone/">
               <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo" />
             </Link>
           </div>
@@ -66,7 +66,7 @@ const Header = () => {
             </button>
             {isDropdownOpen && (
               <ul className="header__dropdown-menu">
-                <li><Link to="/">Home</Link></li>
+                <li><Link to="/Netflix-Clone/">Home</Link></li>
                 <li><Link to="/tv-shows">TV Shows</Link></li>
                 <li><Link to="/movies">Movies</Link></li>
                 <li><Link to="/latest">Latest</Link></li>
@@ -78,7 +78,7 @@ const Header = () => {
         </div>
         <nav className="header__nav">
           <ul className="header__nav-list">
-            <li className="header__nav-item"><Link to="/">Home</Link></li>
+            <li className="header__nav-item"><Link to="/Netflix-Clone/">Home</Link></li>
             <li className="header__nav-item"><Link to="/tv-shows">TV Shows</Link></li>
             <li className="header__nav-item"><Link to="/movies">Movies</Link></li>
             <li className="header__nav-item"><Link to="/latest">Latest</Link></li>
