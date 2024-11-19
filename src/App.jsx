@@ -4,7 +4,7 @@ import Header from './Components/Header/Header';
 import Home from './pages/Home/Home';
 import TvShows from './pages/TvShows/TvShows';
 import Movies from './pages/Movies/Movies';
-import Latest from './pages/Latest/Latest'; // Import the Latest component
+import Latest from './pages/Latest/Latest';
 import Footer from './Components/Footer/Footer';
 import MyList from './pages/MyList/MyList';
 import BrowseByLanguages from './pages/BrowseByLanguages/BrowseByLanguages';

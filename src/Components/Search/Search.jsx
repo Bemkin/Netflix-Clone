@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './Search.css';
 
@@ -40,13 +41,18 @@ const SearchBar = ({ onClose }) => {
         </form>
         <div className="search__results">
           {results.map((result) => (
-            <div key={result.id} className="search__result">
+            <Link
+              key={result.id}
+              to={`/${result.media_type === 'movie' ? 'movie' : 'tv'}/${result.id}`}
+              className="search__result"
+              onClick={onClose}
+            >
               <img
                 src={`https://image.tmdb.org/t/p/w200${result.poster_path || result.profile_path}`}
                 alt={result.title || result.name}
               />
               <p>{result.title || result.name}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
