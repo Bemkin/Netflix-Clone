@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
-import MovieList from '../../Components/MovieList/MovieList'; // Reusing the MovieList component
+import MovieList from './MovieList/MovieLists'; // Corrected import path for MovieList
 import './BrowseByLanguages.css';
 import axios from 'axios';
 
@@ -45,7 +45,7 @@ const BrowseByLanguages = () => {
 
   return (
     <div>
-      <Header />
+      
       <div className="browseByLanguages">
         <h1 className="browseByLanguages__title">Browse by Languages</h1>
         <div className="browseByLanguages__filters">
@@ -56,7 +56,7 @@ const BrowseByLanguages = () => {
               <option value="es">Spanish</option>
               <option value="fr">French</option>
               <option value="de">German</option>
-              {/* Add more languages as needed */}
+              
             </select>
           </div>
           <div className="browseByLanguages__filter">
@@ -65,32 +65,18 @@ const BrowseByLanguages = () => {
               <option value="popularity.desc">Suggestions For You</option>
               <option value="release_date.desc">Release Date</option>
               <option value="vote_average.desc">Highest Rated</option>
-              {/* Add more sorting options as needed */}
+              
             </select>
           </div>
         </div>
         <div className="browseByLanguages__content">
-          <h2>Movies</h2>
-          <div className="browseByLanguages__list">
-            {movies.map((movie) => (
-              <div key={movie.id} className="browseByLanguages__item">
-                <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.title} />
-                <p>{movie.title}</p>
-              </div>
-            ))}
-          </div>
-          <h2>TV Shows</h2>
-          <div className="browseByLanguages__list">
-            {tvShows.map((tvShow) => (
-              <div key={tvShow.id} className="browseByLanguages__item">
-                <img src={`https://image.tmdb.org/t/p/w200${tvShow.poster_path}`} alt={tvShow.name} />
-                <p>{tvShow.name}</p>
-              </div>
-            ))}
-          </div>
+          
+          <MovieList movies={movies} title="Movies" />
+        
+          <MovieList movies={tvShows} title="TV Shows" />
         </div>
       </div>
-      <Footer />
+      
     </div>
   );
 };

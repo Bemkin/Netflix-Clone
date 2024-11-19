@@ -1,14 +1,19 @@
+/* Container for Browse by Languages */
 .browseByLanguages {
-    padding: 20px;
-    color: white;
-    background-color: #111; /* Match background to home page */
+    padding: 40px;
+    color: #f8f8f8;
+    background-color: #141414; /* Dark background for contrast */
     text-align: center; /* Center-align the content */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   .browseByLanguages__title {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 2.5rem; /* Slightly larger title */
     font-weight: bold;
+    color: #f8f8f8; /* Softer white color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add some shadow for depth */
   }
   
   .browseByLanguages__filters {
@@ -18,43 +23,74 @@
   }
   
   .browseByLanguages__filter {
-    margin: 0 10px;
+    margin: 0 20px;
   }
   
   .browseByLanguages__filter label {
     display: block;
     margin-bottom: 5px;
+    color: #f8f8f8;
   }
   
   .browseByLanguages__filter select {
-    padding: 5px;
+    padding: 10px;
     font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #2c2c2c;
+    color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .browseByLanguages__filter select:hover {
+    background-color: #404040;
+    color: #ffffff;
   }
   
   .browseByLanguages__content {
-    text-align: left; /* Align content to the left */
-  }
-  
-  .browseByLanguages__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .browseByLanguages__item {
-    width: 200px;
     text-align: center;
   }
   
+  .browseByLanguages__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Adjust grid columns automatically */
+    gap: 30px; /* Increased space between items */
+    padding: 20px;
+  }
+  
+  .browseByLanguages__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none; /* Remove underline from links */
+    color: #f8f8f8; /* Softer white color for text */
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add some shadow for depth */
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #2c2c2c; /* Background color for the poster container */
+  }
+  
   .browseByLanguages__item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+    width: 100%; /* Use full width within the grid item */
+    border-radius: 10px 10px 0 0; /* Only round top corners */
+    transition: transform 0.3s;
   }
   
   .browseByLanguages__item p {
-    margin-top: 5px;
-    font-size: 1rem;
+    margin-top: 10px; /* Increased margin above text */
+    font-size: 1.2rem; /* Increased font size for text */
+    text-align: center;
+  }
+  
+  /* Hover effect for movie posters */
+  .browseByLanguages__item:hover {
+    transform: scale(1.05); /* Increased scale effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
+  }
+  
+  .browseByLanguages__item:hover img {
+    transform: scale(1.1); /* Increased scale effect on hover */
   }
   

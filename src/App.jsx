@@ -8,6 +8,7 @@ import Latest from './pages/Latest/Latest'; // Import the Latest component
 import Footer from './Components/Footer/Footer';
 import MyList from './pages/MyList/MyList';
 import BrowseByLanguages from './pages/BrowseByLanguages/BrowseByLanguages';
+import Detail from './pages/BrowseByLanguages/MovieList/Detail';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/latest" element={<Latest />} /> 
         <Route path="/my-list" element={<MyList />} />
         <Route path="/browse-by-languages" element={<BrowseByLanguages />} />
+        <Route path="/movie/:id" element={<Detail />} />
       </Routes>
       <Footer/>
     </>
