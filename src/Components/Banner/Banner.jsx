@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import YouTube from 'react-youtube';
-import Modal from '../Modal/Modal'; // Import the Modal component
+import Modal from '../Modal/Modal'; 
 import './Banner.css';
-import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome CSS
+import '@fortawesome/fontawesome-free/css/all.min.css'; 
 
-const API_KEY = '97c9fbc7ec9c3095368e45cd6f9af8db'; // Replace with your actual TMDB API key
+const API_KEY = '97c9fbc7ec9c3095368e45cd6f9af8db'; 
 const BASE_URL = 'https://api.themoviedb.org/3';
 
 const fetchDetails = async (id, type) => {
@@ -21,7 +21,7 @@ const fetchDetails = async (id, type) => {
 const Banner = ({ contentType }) => {
   const [item, setItem] = useState(null);
   const [trailerUrl, setTrailerUrl] = useState('');
-  const [showModal, setShowModal] = useState(false); // State for modal visibility
+  const [showModal, setShowModal] = useState(false); 
 
   useEffect(() => {
     const loadItem = async () => {
@@ -58,8 +58,8 @@ const Banner = ({ contentType }) => {
   };
 
   const opts = {
-    height: '100%', // Full height
-    width: '100%', // Full width
+    height: '100%',
+    width: '100%', 
     playerVars: {
       autoplay: 1,
     },

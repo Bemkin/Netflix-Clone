@@ -88,7 +88,7 @@ const MovieList = ({ title, fetchUrl }) => {
     height: '269',
     width: '400',
     playerVars: {
-      autoplay: 1, // Automatically play the video
+      autoplay: 1, 
     },
   };
 

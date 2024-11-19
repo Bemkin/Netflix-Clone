@@ -71,7 +71,7 @@ const Header = () => {
                 <li><Link to="/movies">Movies</Link></li>
                 <li><Link to="/latest">Latest</Link></li>
                 <li><Link to="/my-list">My List</Link></li>
-                <li><Link to="/browse-by-languages">Browse by Languages</Link></li> {/* Added link to Browse by Languages */}
+                <li><Link to="/browse-by-languages">Browse by Languages</Link></li> 
               </ul>
             )}
           </div>
@@ -83,7 +83,7 @@ const Header = () => {
             <li className="header__nav-item"><Link to="/movies">Movies</Link></li>
             <li className="header__nav-item"><Link to="/latest">Latest</Link></li>
             <li className="header__nav-item"><Link to="/my-list">My List</Link></li>
-            <li className="header__nav-item"><Link to="/browse-by-languages">Browse by Languages</Link></li> {/* Added link to Browse by Languages */}
+            <li className="header__nav-item"><Link to="/browse-by-languages">Browse by Languages</Link></li> 
           </ul>
         </nav>
         <div className="header__icons">
