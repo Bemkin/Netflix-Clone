@@ -43,7 +43,6 @@ const Detail = () => {
         <p className="detail__description">{details.overview}</p>
         <p className="detail__info"><strong>Release Date:</strong> {details.release_date || details.first_air_date}</p>
         <p className="detail__info"><strong>Rating:</strong> {details.vote_average}</p>
-        {/* Add more details as needed */}
       </div>
     
     </div>

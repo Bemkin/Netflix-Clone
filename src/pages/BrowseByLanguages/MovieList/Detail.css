@@ -1,13 +1,13 @@
 .detail {
     padding: 20px;
     color: white;
-    background-color: #111; /* Match background to home page */
-    text-align: center; /* Center-align the content */
+    background-color: #111; 
+    text-align: center; 
   }
   
   .detail__title {
     margin-bottom: 20px;
-    font-size: 2.5rem; /* Slightly larger title */
+    font-size: 2.5rem; 
     font-weight: bold;
   }
   
@@ -19,12 +19,12 @@
   
   .detail__description {
     margin-top: 20px;
-    font-size: 1.2rem; /* Slightly larger description */
+    font-size: 1.2rem; 
   }
   
   .detail__info {
     margin-top: 10px;
-    font-size: 1rem; /* Standard info text size */
+    font-size: 1rem; 
   }
   .loading {
     text-align:center; 

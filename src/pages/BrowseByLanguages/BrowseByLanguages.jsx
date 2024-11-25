@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../../Components/Header/Header';
-import Footer from '../../Components/Footer/Footer';
-import MovieList from './MovieList/MovieLists'; // Corrected import path for MovieList
+import MovieList from './MovieList/MovieLists'; 
 import './BrowseByLanguages.css';
 import axios from 'axios';
 
-const API_KEY = '97c9fbc7ec9c3095368e45cd6f9af8db'; // Replace with your actual TMDB API key
+const API_KEY = '97c9fbc7ec9c3095368e45cd6f9af8db'; 
 const BASE_URL = 'https://api.themoviedb.org/3';
 
 const BrowseByLanguages = () => {

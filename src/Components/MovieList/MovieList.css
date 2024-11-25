@@ -11,14 +11,9 @@
     display: flex;
     overflow: hidden;
     padding: 20px;
-    scrollbar-width: none; /* For Firefox */
-    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scrollbar-width: none;
   }
-  
-  .movieList__posters::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and Opera */
-  }
-  
+
   .movieList__poster-container {
     position: relative;
     margin-right: 10px;
@@ -48,13 +43,13 @@
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 10;
     opacity: 0;
-    pointer-events: none; /* Prevent interaction when not visible */
+    pointer-events: none; 
     transition: opacity 0.5s ease-in-out;
   }
   
   .movieList__trailer--visible {
     opacity: 1;
-    pointer-events: auto; /* Allow interaction when visible */
+    pointer-events: auto; 
   }
   
   .movieList__close-button {

@@ -7,7 +7,7 @@ const Movies = () => {
   return (
     <div>
      
-      <Banner contentType="movie" /> {/* Specify content type as 'movie' */}
+      <Banner contentType="movie" /> 
       <MovieList title="Trending Movies" fetchUrl="/trending/movie/week" />
       <MovieList title="Top Rated Movies" fetchUrl="/movie/top_rated" />
       <MovieList title="Action Movies" fetchUrl="/discover/movie?with_genres=28" />

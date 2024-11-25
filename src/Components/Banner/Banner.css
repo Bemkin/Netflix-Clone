@@ -191,6 +191,6 @@ body {
   font-weight: bold;
   color: white;
   cursor: pointer;
-  z-index: 1000; /* Ensure button is above the video */
+  z-index: 1000; 
 }
 

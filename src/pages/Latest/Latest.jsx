@@ -7,7 +7,7 @@ const Latest = () => {
   return (
     <div>
       
-      <Banner contentType="movie" /> {/* Specify content type as 'movie' for a generic latest banner */}
+      <Banner contentType="movie" /> 
       <h1 className="latest__title">Latest Movies & TV Shows</h1>
       <MovieList title="Latest Movies" fetchUrl="/movie/now_playing" />
       <MovieList title="Upcoming Movies" fetchUrl="/movie/upcoming" />

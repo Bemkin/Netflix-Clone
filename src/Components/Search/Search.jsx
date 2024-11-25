@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './Search.css';
 
-const API_KEY = '97c9fbc7ec9c3095368e45cd6f9af8db'; // Replace with your actual TMDB API key
+const API_KEY = '97c9fbc7ec9c3095368e45cd6f9af8db'; 
 const BASE_URL = 'https://api.themoviedb.org/3';
 
 const SearchBar = ({ onClose }) => {

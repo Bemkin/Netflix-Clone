@@ -2,18 +2,18 @@
 .browseByLanguages {
     padding: 40px;
     color: #f8f8f8;
-    background-color: #141414; /* Dark background for contrast */
-    text-align: center; /* Center-align the content */
+    background-color: #141414; 
+    text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   .browseByLanguages__title {
     margin-bottom: 30px;
-    font-size: 2.5rem; /* Slightly larger title */
+    font-size: 2.5rem; 
     font-weight: bold;
-    color: #f8f8f8; /* Softer white color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add some shadow for depth */
+    color: #f8f8f8; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
   }
   
   .browseByLanguages__filters {
@@ -54,8 +54,8 @@
   
   .browseByLanguages__list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Adjust grid columns automatically */
-    gap: 30px; /* Increased space between items */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+    gap: 30px; 
     padding: 20px;
   }
   
@@ -63,34 +63,34 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-decoration: none; /* Remove underline from links */
-    color: #f8f8f8; /* Softer white color for text */
+    text-decoration: none; 
+    color: #f8f8f8;
     transition: transform 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add some shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     border-radius: 10px;
     overflow: hidden;
-    background-color: #2c2c2c; /* Background color for the poster container */
+    background-color: #2c2c2c; 
   }
   
   .browseByLanguages__item img {
-    width: 100%; /* Use full width within the grid item */
-    border-radius: 10px 10px 0 0; /* Only round top corners */
+    width: 100%; 
+    border-radius: 10px 10px 0 0; 
     transition: transform 0.3s;
   }
   
   .browseByLanguages__item p {
-    margin-top: 10px; /* Increased margin above text */
-    font-size: 1.2rem; /* Increased font size for text */
+    margin-top: 10px; 
+    font-size: 1.2rem;
     text-align: center;
   }
   
   /* Hover effect for movie posters */
   .browseByLanguages__item:hover {
-    transform: scale(1.05); /* Increased scale effect on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
   }
   
   .browseByLanguages__item:hover img {
-    transform: scale(1.1); /* Increased scale effect on hover */
+    transform: scale(1.1); 
   }
   

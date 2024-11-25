@@ -1,7 +1,7 @@
 .tvShows {
     padding: 20px;
     color: white;
-    background-color: #111; /* Match background to home page */
+    background-color: #111; 
   }
   
   .tvShows__title {
@@ -11,5 +11,5 @@
     text-align: center;
   }
   
-  /* You can reuse any relevant styles from Home.css here */
+  
   

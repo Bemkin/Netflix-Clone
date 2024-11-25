@@ -5,7 +5,7 @@
 
 .movieLists h2 {
   margin-left: 20px;
-  font-size: 1.8rem; /* Increased font size for the heading */
+  font-size: 1.8rem;
   font-weight: bold;
   color: #fff;
 }
@@ -13,9 +13,9 @@
 /* Grid container for the movie posters */
 .movieLists__posters {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust grid columns automatically */
-  gap: 20px; /* Space between items */
-  padding: 30px; /* Increased padding */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  gap: 20px; 
+  padding: 30px; 
 }
 
 /* Individual movie poster container */
@@ -23,28 +23,28 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-decoration: none; /* Remove underline from links */
-  color: #fff; /* Default color for text */
+  text-decoration: none; 
+  color: #fff;
   transition: transform 0.2s;
 }
 
 .movieLists__item img {
-  max-width: 100%; /* Use full width within the grid item */
-  border-radius: 10px; /* Slightly increased border radius */
+  max-width: 100%; 
+  border-radius: 10px; 
   transition: transform 0.2s;
 }
 
 .movieLists__item p {
-  margin-top: 10px; /* Increased margin above text */
-  font-size: 1.2rem; /* Increased font size for text */
+  margin-top: 10px; 
+  font-size: 1.2rem;
   text-align: center;
 }
 
 /* Hover effect for movie posters */
 .movieLists__item:hover {
-  transform: scale(1.05); /* Increased scale effect on hover */
+  transform: scale(1.05);
 }
 
 .movieLists__item:hover img {
-  transform: scale(1.1); /* Increased scale effect on hover */
+  transform: scale(1.1);
 }

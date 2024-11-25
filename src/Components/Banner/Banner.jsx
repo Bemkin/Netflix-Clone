@@ -46,15 +46,15 @@ const Banner = ({ contentType }) => {
   };
 
   const handleCloseVideo = () => {
-    setTrailerUrl(''); // Clear the trailer URL to stop the video and return to the banner content
+    setTrailerUrl('');
   };
 
   const handleMoreInfo = () => {
-    setShowModal(true); // Show the modal when "More Info" is clicked
+    setShowModal(true);
   };
 
   const handleCloseModal = () => {
-    setShowModal(false); // Close the modal
+    setShowModal(false);
   };
 
   const opts = {
@@ -77,7 +77,7 @@ const Banner = ({ contentType }) => {
             <div className="banner__video-container">
               <YouTube videoId={trailerUrl.split('v=')[1]} opts={opts} className="banner__video" />
               <button className="banner__close-video" onClick={handleCloseVideo}>
-                &times; {/* Close button */}
+                &times; 
               </button>
             </div>
           ) : (
@@ -97,7 +97,7 @@ const Banner = ({ contentType }) => {
         </div>
         <div className={`banner--fadeBottom ${trailerUrl ? 'banner--hidden' : ''}`}></div>
       </header>
-      {showModal && <Modal item={item} onClose={handleCloseModal} />} {/* Display the modal when showModal is true */}
+      {showModal && <Modal item={item} onClose={handleCloseModal} />}
     </>
   );
 };
