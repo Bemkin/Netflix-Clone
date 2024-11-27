@@ -114,3 +114,14 @@
     margin-right: 10px;
     transition: transform 0.2s;
   }  
+
+ @media (max-width: 640px ) {
+  .movieList__poster {
+width: 150px;
+  }
+  }
+  @media (max-width: 420px){
+    .movieList__poster{
+      width: 110px;
+    }
+  }

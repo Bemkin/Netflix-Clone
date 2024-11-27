@@ -156,14 +156,44 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+
+@media (max-width: 400px) {
   .banner__title {
     font-size: 1.5rem;
+  }
+
+  .banner{
+    height: 500px;
+    
   }
 
   .banner__description {
     font-size: 0.9rem;
     width: 100%;
+  }
+  .banner--fadeBottom{
+    top: 52%;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .banner__title {
+    font-size: 1.5rem;
+  }
+
+  .banner{
+    height: 500px;
+    width: 430px;
+  }
+
+  .banner__description {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+  .banner--fadeBottom{
+    top: 52%;
   }
 }
 
