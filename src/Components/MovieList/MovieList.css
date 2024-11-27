@@ -119,9 +119,15 @@
   .movieList__poster {
 width: 150px;
   }
+  .movieList__trailer {
+    height: 225px;
+  }
   }
   @media (max-width: 420px){
     .movieList__poster{
       width: 110px;
+    }
+    .movieList__trailer {
+      height: 215px;
     }
   }
