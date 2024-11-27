@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import YouTube from 'react-youtube';
 import Modal from '../Modal/Modal'; 
 import './Banner.css';
-import '@fortawesome/fontawesome-free/css/all.min.css'; 
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import { VideoContext } from '../MovieList/VideoContext'; // Import the context
 
 const API_KEY = '97c9fbc7ec9c3095368e45cd6f9af8db'; 
 const BASE_URL = 'https://api.themoviedb.org/3';
@@ -21,7 +22,8 @@ const fetchDetails = async (id, type) => {
 const Banner = ({ contentType }) => {
   const [item, setItem] = useState(null);
   const [trailerUrl, setTrailerUrl] = useState('');
-  const [showModal, setShowModal] = useState(false); 
+  const [showModal, setShowModal] = useState(false);
+  const { playingVideo, setPlayingVideo, pausePlayingVideo, setPausePlayingVideo } = useContext(VideoContext); // Use the context
 
   useEffect(() => {
     const loadItem = async () => {
@@ -39,6 +41,13 @@ const Banner = ({ contentType }) => {
   }, [contentType]);
 
   const handlePlay = () => {
+    if (playingVideo && playingVideo !== 'banner' && pausePlayingVideo) {
+      pausePlayingVideo();
+    }
+    setPlayingVideo('banner');
+    setPausePlayingVideo(() => () => {
+      setTrailerUrl('');
+    });
     if (item && item.videos && item.videos.results) {
       const trailer = item.videos.results.find((video) => video.type === "Trailer");
       setTrailerUrl(trailer ? `https://www.youtube.com/watch?v=${trailer.key}` : '');

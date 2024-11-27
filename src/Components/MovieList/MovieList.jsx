@@ -1,7 +1,8 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useContext } from 'react';
 import axios from 'axios';
 import './MovieList.css';
 import YouTube from 'react-youtube';
+import { VideoContext } from '../MovieList/VideoContext'; 
 
 const API_KEY = '97c9fbc7ec9c3095368e45cd6f9af8db';
 const BASE_URL = 'https://api.themoviedb.org/3';
@@ -12,6 +13,7 @@ const MovieList = ({ title, fetchUrl }) => {
   const [trailerUrl, setTrailerUrl] = useState('');
   const listRef = useRef(null);
   const containerRef = useRef(null);
+  const { playingVideo, setPlayingVideo, pausePlayingVideo, setPausePlayingVideo } = useContext(VideoContext); // Use the context
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -70,6 +72,13 @@ const MovieList = ({ title, fetchUrl }) => {
   };
 
   const handleClick = async (movie) => {
+    if (playingVideo && playingVideo !== 'movieList' && pausePlayingVideo) {
+      pausePlayingVideo();
+    }
+    setPlayingVideo('movieList');
+    setPausePlayingVideo(() => () => {
+      setTrailerUrl('');
+    });
     if (clickedMovie && clickedMovie.id === movie.id) {
       setClickedMovie(null);
       setTrailerUrl('');
