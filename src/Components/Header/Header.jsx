@@ -78,7 +78,7 @@ const Header = () => {
         </div>
         <nav className="header__nav">
           <ul className="header__nav-list">
-            <li className="header__nav-item"><Link to="/Netflix-Clone/">Home</Link></li>
+            <li className="header__nav-item"><Link to="/">Home</Link></li>
             <li className="header__nav-item"><Link to="/tv-shows">TV Shows</Link></li>
             <li className="header__nav-item"><Link to="/movies">Movies</Link></li>
             <li className="header__nav-item"><Link to="/latest">Latest</Link></li>
